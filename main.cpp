@@ -46,24 +46,27 @@ public:
 };
 
 int main (){
+    cout << "Name: Jackie Ocaña - Prog1 - March 14, 2021" << endl;
     TEST TC1;
 //    TEST 1
-    TC1.testNullPtr();
-//will throw an error because it is null so there is nothing there in that memory
+//    TC1.testNullPtr();
+//  commented out to be able to see the output of the other functions
+//  will throw an error because it is null so there is nothing there in that memory
     
 //    TEST 2
     for (int i = 0; i > 0; i++){
         TC1.memoryLeak();
     }
-//will also throw an error - if it worked properly then it would run infinitely and not let everything below run
+//  will also throw an error - if it worked properly then it would run infinitely and not let everything below run
     
 //    TEST 3
     string *ptrS;
     ptrS = TC1.deletePointer();
     *ptrS = "you've been dereferenced";
-//EXPLAIN
+//pointer was dereferenced from Carlos to "you've been dereferenced"
     
 //    TEST 4
     TC1.testTwoAlias();
-//EXPLAIN
+//prints the RAM location
+//prints the value 42 since pointers are now equal
 }
